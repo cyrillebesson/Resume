@@ -34,12 +34,31 @@
 
     html {}
 
+    h1,
     a {
-      color: var(--color-main);
+      color: var(--color-main) !important;
+    }
+
+    nav {
+      font-weight: bold;
+    }
+
+    h3 a {
+      color: var(--color-dark) !important;
+    }
+
+    article>h3 {
+      color: var(--color-main) !important;
+      font-weight: bold;
     }
 
     section {
       padding-left: 20px;
+    }
+
+    .blog-post-meta {
+      color: var(--color-main) !important;
+      font-weight: bold;
     }
 
     .label {
@@ -51,19 +70,74 @@
     }
 
     .label-primary {
+      background: var(--color-main);
       background-color: var(--color-main);
     }
 
     .label-success {
-      background-color: var(--color-green);
+      background: transparent;
+      border: 2px solid var(--color-main);
+      color: var(--color-main);
     }
 
     .label-info {
+      background: var(--color-dark);
       background-color: var(--color-dark);
+    }
+
+    @media print {
+
+      *,
+      *:before,
+      *:after {
+        color: initial !important;
+        text-shadow: none !important;
+        background: inherit !important;
+        background-color: inherit !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+      }
+
+      .label {
+        background: inherit !important;
+        background-color: inherit !important;
+      }
+
+      a[href]:after {
+        content: none !important;
+      }
+
+      h1 {
+        margin-top: -20px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-size: 18px;
+      }
+
+      article {
+        page-break-inside: avoid;
+      }
+
+      h2 {
+        display: none;
+      }
+
+      nav,
+      .navbar {
+        display: block;
+      }
+
+      .label-success {
+        border: 1px solid #000 !important;
+      }
+
     }
   </style>
 
-  <title>RESUME</title>
+  <title>Cyrille Besson - UI / UX Designer - Resume 2021</title>
 </head>
 
 <body class="container">
@@ -121,6 +195,8 @@
 
     </article>
 
+    <hr>
+
     <article>
 
       <h3>EXPERIENCE</h3>
@@ -158,15 +234,18 @@
           Geneva - Switzerland
 
         </p>
+
         <ul>
-          <li>Wireframing and Prototyping user interfaces for web and mobile apps</li>
-          <li>Front-end development in HTML / CSS</li>
-          <li>Design promotional content for social networks</li>
-          <li>Legal interactive document layout</li>
+          <li>Branding development for AQUANAUTIC™</li>
+          <li>Design promotional content for international magazines</li>
+          <li>Catalogs and technical manuals layout</li>
+          <li>Industrial design and blueprint reviews (watch design)</li>
         </ul>
 
       </section>
     </article>
+
+    <hr>
 
     <article>
 
@@ -212,24 +291,24 @@
           <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
           2009 - 2010
           <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-          Cheltenham - UK
-        </p>
-      </section>
-
-      <section class="blog-post">
-        <h3 class="blog-post-title">Bachelor in Graphic Design - <a href="https://www.glos.ac.uk/"
-            target="_blank">University of Gloucestershire</a></h3>
-        <p class="blog-post-meta">
-          <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
-          2007 - 2009
-          <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
           Geneva - Switzerland
         </p>
       </section>
 
-      certifications (freecodecamp, openclassroom, ifage, secondary diplomas)
+      <section class="blog-post">
+        <h3 class="blog-post-title">Bachelor in Graphic Design - <a href="https://www.ipac-design.ch/"
+            target="_blank">Ipac Design</a></h3>
+        <p class="blog-post-meta">
+          <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+          2007 - 2009
+          <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+          Cheltenham - UK
+        </p>
+      </section>
 
     </article>
+
+    <hr>
 
     <article>
 
@@ -266,6 +345,8 @@
 
     </article>
 
+    <hr>
+
     <article>
 
       <h3>VOLUNTEERING</h3>
@@ -285,7 +366,7 @@
 
   <footer>
 
-    Footer
+
 
   </footer>
 
